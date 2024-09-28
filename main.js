@@ -1,19 +1,8 @@
-document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
+// Seleciona o ícone de menu e o menu em si
+const menuIcon = document.getElementById('menu-icon');
+const menu = document.getElementById('menu');
 
-    if (name && email && message) {
-        alert(`Obrigado pelo contato, ${name}!`);
-        document.getElementById('contactForm').reset();
-    } else {
-        alert('Por favor, preencha todos os campos.');
-    }
+// Função para alternar o menu hambúrguer
+menuIcon.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
 });
-
-
-function toggleMenu() {
-    const menu = document.getElementById('menu');
-    menu.classList.toggle('active');
-}

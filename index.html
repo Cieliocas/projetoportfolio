@@ -3,103 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio - Franciélio</title>
+    <title>Portfolio - Franciélio</title>
     <link rel="stylesheet" href="main.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <script src="main.js" defer></script>
 </head>
 <body>
     <header>
-        <div class="container header-container">
-            <h1>Franciélio - Desenvolvedor Front-end</h1>
-            <!-- Ícones do GitHub e LinkedIn -->
+        <div class="header-container">
+            <div class="logo">
+                <span class="logo-text">F</span> <!-- Letra inicial, você pode substituir por um logo -->
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#about">01. Sobre</a></li>
+                    <li><a href="#projects">02. Projetos</a></li>
+                    <li><a href="#contact">03. Contato</a></li>
+                </ul>
+            </nav>
             <div class="social-icons">
-                <a href="https://github.com/cieliocas" target="_blank">
-                    <img src="https://img.icons8.com/ios-filled/50/ffffff/github.png" alt="GitHub" />
-                </a>
-                <a href="https://www.linkedin.com/in/cieliocas" target="_blank">
-                    <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn" />
-                </a>
-                <!-- Ícone do menu hambúrguer -->
-                <div class="menu-icon" onclick="toggleMenu()">
-                    &#9776; <!-- símbolo do menu hambúrguer -->
-                </div>
+                <a href="https://github.com/cieliocas" target="_blank"><img src="img-ico/gitimg.png" alt="GitHub"></a>
+                <a href="https://www.linkedin.com/in/cieliocas" target="_blank"><img src="img-ico/lkdimg.png" alt="LinkedIn"></a>
+            </div>
+            <div class="menu-icon" id="menu-icon">
+                &#9776;
             </div>
         </div>
-        <!-- Menu escondido -->
+
+        <!-- Menu Hambúrguer -->
         <nav id="menu" class="hidden">
             <ul>
-                <li><a href="#sobre">Sobre Mim</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#contato">Contato</a></li>
+                <li><a href="#about">01. Sobre</a></li>
+                <li><a href="#projects">02. Projetos</a></li>
+                <li><a href="#contact">03. Contato</a></li>
             </ul>
         </nav>
+
+        <!-- Imagem e conteúdo principal do header -->
+        <div class="header-content">
+            <img src="img-ico/profile-icon.jpeg" alt="Foto" class="profile-photo">
+            <p>Olá, meu nome é</p>
+            <h1>Franciélio.</h1>
+            <h2>Eu construo soluções para a web.</h2>
+            <p class="header-description">Sou um desenvolvedor focado em criar experiências digitais excepcionais. Atualmente, estou estudando Desenvolvimento Fullstack com ênfase em Python.</p>
+            <a href="#projects" class="cta-button">Veja meus projetos!</a>
+        </div>
     </header>
-
-    <section id="sobre">
-        <div class="container">
-            <h2>Sobre Mim</h2>
-            <p>Olá, meu nome é Franciélio, sou estudante de Ciência da Computação e desenvolvedor Front-end. Tenho experiência em HTML, CSS, JavaScript, React, Bootstrap e Tailwind.</p>
-        </div>
+    
+    <!-- Restante do conteúdo -->
+    <section id="about">
+        <!-- Conteúdo do sobre -->
     </section>
 
-    <section id="projetos">
-        <div class="container">
-            <h2>Projetos</h2>
-            <div class="grid-projetos">
-                <div class="projeto">
-                    <img src="https://picsum.photos/300/200" alt="Projeto 1">
-                    <h3>Projeto 1 - Nome do Projeto</h3>
-                    <p>Descrição breve do projeto.</p>
-                </div>
-                <div class="projeto">
-                    <img src="https://picsum.photos/300/200" alt="Projeto 2">
-                    <h3>Projeto 2 - Nome do Projeto</h3>
-                    <p>Descrição breve do projeto.</p>
-                </div>
-                <div class="projeto">
-                    <img src="https://picsum.photos/300/200" alt="Projeto 3">
-                    <h3>Projeto 3 - Nome do Projeto</h3>
-                    <p>Descrição breve do projeto.</p>
-                </div>
-                <div class="projeto">
-                    <img src="https://picsum.photos/300/200" alt="Projeto 4">
-                    <h3>Projeto 4 - Nome do Projeto</h3>
-                    <p>Descrição breve do projeto.</p>
-                </div>
-                <div class="projeto">
-                    <img src="https://picsum.photos/300/200" alt="Projeto 5">
-                    <h3>Projeto 5 - Nome do Projeto</h3>
-                    <p>Descrição breve do projeto.</p>
-                </div>
-                <div class="projeto">
-                    <img src="https://picsum.photos/300/200" alt="Projeto 6">
-                    <h3>Projeto 6 - Nome do Projeto</h3>
-                    <p>Descrição breve do projeto.</p>
-                </div>
-            </div>
-        </div>
+    <section id="projects">
+        <!-- Projetos -->
     </section>
 
-    <section id="contato">
-        <div class="container">
-            <h2>Contato</h2>
-            <form id="contactForm">
-                <input type="text" id="name" placeholder="Nome" required>
-                <input type="email" id="email" placeholder="Email" required>
-                <textarea id="message" placeholder="Mensagem" required></textarea>
-                <button type="submit">Enviar</button>
-            </form>
-        </div>
+    <section id="contact">
+        <!-- Contato -->
     </section>
 
     <footer>
-        <div class="container">
-            <p>© 2024 Franciélio - Todos os direitos reservados</p>
-        </div>
+        <!-- Footer -->
     </footer>
-
-    <script src="main.js"></script>
 </body>
 </html>
