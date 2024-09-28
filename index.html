@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Franciélio</title>
     <link rel="stylesheet" href="main.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="main.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
@@ -48,14 +50,50 @@
             <a href="#projects" class="cta-button">Veja meus projetos!</a>
         </div>
     </header>
-    
-    <!-- Restante do conteúdo -->
-    <section id="about">
-        <!-- Conteúdo do sobre -->
+    <section id="about" class="about-section">
+        <div class="about-content">
+            <h3>01. Sobre</h3>
+            <p>Olá, me chamo Franciélio!</p>
+            <p>Estou mergulhando de cabeça no mundo da programação, explorando ferramentas poderosas como JavaScript e Python. Atualmente, estou desenvolvendo projetos no Front-end com HTML, CSS, JavaScript, jQuery e, em breve, expandirei para o Back-end com Python, Node.js e a integração entre Front-end e Back-end. Além disso, estou me aprofundando em frameworks e bibliotecas como Vue.js, React.js e Angular, com a EBAC me fornecendo uma base sólida para me tornar um especialista.</p>
+            <p>Minha paixão por tecnologias começou cedo e me levou a cursar Engenharia Elétrica. Motivado pelo que aprendi de programação e tecnologia na engenharia, estou fazendo a transição para Ciências da Computação na mesma universidade.</p>
+            <p>Atualmente, meu interesse está voltado para a Indústria 4.0 e inovações alinhadas a programação, com ênfase em Desenvolvimento Front-end e futuramente Fullstack. Estou empenhado em entender como a tecnologia pode transformar a vida das pessoas.</p>
+            <p>Além disso, trabalho com análise de crédito, sempre seguindo rigorosamente a Lei Geral de Proteção de Dados (LGPD). Esse papel exige uma atenção detalhada e habilidades analíticas e lógicas, contribuindo para um trabalho em equipe eficaz e inovador.</p>
+            <p>Vamos conectar e trocar ideias sobre tecnologia e inovações? Estou aberto a novas oportunidades na área de tecnologia e desenvolvimento de software!</p>
+        </div>
     </section>
 
-    <section id="projects">
-        <!-- Projetos -->
+    <section id="projects" class="projects-section">
+        <h3>02. Projetos</h3>
+        <div class="carousel">
+            <div class="carousel-item">
+                <a href="https://www.microsoft.com" target="_blank">
+                    <img src="./img-ico/webdev-img.png" alt="Projeto 1">
+                </a>
+                <h4><a href="https://www.microsoft.com" target="_blank">Projeto 1</a></h4>
+                <p>Descrição do Projeto 1: Um projeto incrível desenvolvido com tecnologias modernas.</p>
+            </div>
+            <div class="carousel-item">
+                <a href="https://www.microsoft.com" target="_blank">
+                    <img src="./img-ico/webdev-img.png" alt="Projeto 2">
+                </a>
+                <h4><a href="https://www.microsoft.com" target="_blank">Projeto 2</a></h4>
+                <p>Descrição do Projeto 2: Este projeto explora novas abordagens em design e desenvolvimento.</p>
+            </div>
+            <div class="carousel-item">
+                <a href="https://www.microsoft.com" target="_blank">
+                    <img src="./img-ico/webdev-img.png" alt="Projeto 3">
+                </a>
+                <h4><a href="https://www.microsoft.com" target="_blank">Projeto 3</a></h4>
+                <p>Descrição do Projeto 3: Soluções tecnológicas inovadoras implementadas em um projeto eficiente.</p>
+            </div>
+            <div class="carousel-item">
+                <a href="https://www.microsoft.com" target="_blank">
+                    <img src="./img-ico/webdev-img.png" alt="Projeto 4">
+                </a>
+                <h4><a href="https://www.microsoft.com" target="_blank">Projeto 4</a></h4>
+                <p>Descrição do Projeto 4: Um projeto revolucionário que transforma ideias em realidade.</p>
+            </div>
+        </div>
     </section>
 
     <section id="contact">
@@ -65,5 +103,7 @@
     <footer>
         <!-- Footer -->
     </footer>
+
+    <script src="main.js"></script>
 </body>
 </html>
