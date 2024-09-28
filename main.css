@@ -30,6 +30,17 @@ header {
     align-items: center;
 }
 
+footer {
+    background: linear-gradient(to right, #ff42b780, #f84a1f7a); /* Gradiente do roxo para mais escuro */
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    text-shadow: #2a1e5c;
+    border-top-style: solid;
+    border-color: #f39c12;
+}
+
 .header-container {
     width: 100%;
     display: flex;
@@ -158,6 +169,7 @@ header {
     color: #ffffff;
     text-align: justify;
     opacity: 0.9; /* Opacidade da seção */
+    border: 2px solid #f39c12;
 }
 
 .about-section h3 {
@@ -207,11 +219,19 @@ header {
     height: 200px;
     object-fit: cover;
     border-radius: 10px;
+    margin-bottom: 1rem;
+    border: 2px solid #f39c12;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+    transition: opacity 0.5s ease; 
 }
 
 .carousel h4 {
     margin-top: 1rem;
     color: #f39c12;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
 }
 
 .carousel p {
@@ -221,6 +241,7 @@ header {
 .carousel-item:hover {
     transform: scale(1.05);
 }
+
 
 /* Responsividade */
 @media (max-width: 768px) {
