@@ -8,6 +8,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="main.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
 <body>
     <header>
@@ -46,7 +47,9 @@
             <p>Olá, meu nome é</p>
             <h1>Franciélio.</h1>
             <h2>Eu construo soluções para a web.</h2>
-            <p class="header-description">Sou um desenvolvedor focado em criar experiências digitais excepcionais. Atualmente, estou estudando Desenvolvimento Fullstack com ênfase em Python.</p>
+            <p class="header-description">
+                Sou um desenvolvedor focado em criar experiências digitais excepcionais. Atualmente, estou estudando Desenvolvimento Fullstack.
+            </p>
             <a href="#projects" class="cta-button">Veja meus projetos!</a>
         </div>
     </header>
@@ -63,41 +66,57 @@
     </section>
 
     <section id="projects" class="projects-section">
-        <h3>02. Projetos</h3>
-        <div class="carousel">
-            <div class="carousel-item">
-                <a href="https://www.microsoft.com" target="_blank">
-                    <img src="./img-ico/webdev-img.png" alt="Projeto 1">
-                </a>
-                <h4><a href="https://www.microsoft.com" target="_blank">Projeto 1</a></h4>
-                <p>Descrição do Projeto 1: Um projeto incrível desenvolvido com tecnologias modernas.</p>
+        <main>
+            <div>
+                <span>Descubra</span>
+                <h1>Meus projetos</h1>
+                <hr>
+                <p>Explorar meus projetos é mergulhar em uma jornada de criatividade e tecnologia. Cada site, cada aplicação, é um reflexo do meu empenho em unir funcionalidade e design. Dê uma olhada nas obras que mostram minhas habilidades e paixão pelo desenvolvimento front-end.</p>
             </div>
-            <div class="carousel-item">
-                <a href="https://www.microsoft.com" target="_blank">
-                    <img src="./img-ico/webdev-img.png" alt="Projeto 2">
-                </a>
-                <h4><a href="https://www.microsoft.com" target="_blank">Projeto 2</a></h4>
-                <p>Descrição do Projeto 2: Este projeto explora novas abordagens em design e desenvolvimento.</p>
-            </div>
-            <div class="carousel-item">
-                <a href="https://www.microsoft.com" target="_blank">
-                    <img src="./img-ico/webdev-img.png" alt="Projeto 3">
-                </a>
-                <h4><a href="https://www.microsoft.com" target="_blank">Projeto 3</a></h4>
-                <p>Descrição do Projeto 3: Soluções tecnológicas inovadoras implementadas em um projeto eficiente.</p>
-            </div>
-            <div class="carousel-item">
-                <a href="https://www.microsoft.com" target="_blank">
-                    <img src="./img-ico/webdev-img.png" alt="Projeto 4">
-                </a>
-                <h4><a href="https://www.microsoft.com" target="_blank">Projeto 4</a></h4>
-                <p>Descrição do Projeto 4: Um projeto revolucionário que transforma ideias em realidade.</p>
-            </div>
-        </div>
-    </section>
 
-    <section id="contact">
-        <!-- Contato -->
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide swiper-slide--one">
+                        <div>
+                            <h2>Habbo Thematic Site</h2>
+                            <p>Reviva a nostalgia com este site temático inspirado em Habbo, repleto de elementos visuais clássicos e interação social.</p>
+                            <a href="https://www.google.com/" target="_blank">explorar</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide--two">
+                        <div>
+                            <h2>Car Sales Carousel</h2>
+                            <p>Explore veículos com estilo e praticidade neste site de venda de carros, que inclui um carrossel de imagens dinâmico para uma experiência envolvente.</p>
+                            <a href="https://www.google.com/" target="_blank">explorar</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide--three">
+                        <div>
+                            <h2>Responsive Project</h2>
+                            <p>Meu portfólio de desenvolvimento front-end, apresentando um design elegante e responsividade, perfeito para qualquer dispositivo.</p>
+                            <a href="https://www.google.com/" target="_blank">explorar</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide--four">
+                        <div>
+                            <h2>StreamMe (Next.js & GoLang)</h2>
+                            <p>Plataforma de streaming inovadora utilizando Next.js, GoLang, Docker e Django, trazendo vídeos de alta qualidade para todos.</p>
+                            <a href="https://www.google.com/" target="_blank">explorar</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide--five">
+                        <div>
+                            <h2>Disney+ Clone</h2>
+                            <p>Experimente a magia do entretenimento com este clone da landing page da Disney+, recriado com um toque pessoal e habilidades técnicas.</p>
+                            <a href="https://www.google.com/" target="_blank">explorar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <img src="https://cdn.pixabay.com/photo/2021/11/04/19/39/jellyfish-6769173_960_720.png" alt="" class="bg">
+            <img src="https://cdn.pixabay.com/photo/2012/04/13/13/57/scallop-32506_960_720.png" alt="" class="bg2">
+        </main>
     </section>
 
     <footer>
@@ -106,6 +125,23 @@
         </div>
     </footer>
 
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        // Inicializa o Swiper
+        var swiper = new Swiper('.swiper', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            }
+        });
+    </script>
     <script src="main.js"></script>
 </body>
 </html>

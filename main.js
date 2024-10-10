@@ -7,17 +7,45 @@ menuIcon.addEventListener('click', () => {
     menu.classList.toggle('hidden');
 });
 
-$(document).ready(function() {
-    let currentIndex = 0;
-    const items = $('.carousel-item');
-    const itemCount = items.length;
+/*
+inspiration
+https://dribbble.com/shots/4684682-Aquatic-Animals
+*/
 
-    function showNextItem() {
-        const nextIndex = (currentIndex + 1) % itemCount;
-        items.eq(currentIndex).css('transform', 'translateX(-100%)');
-        items.eq(nextIndex).css('transform', 'translateX(0)');
-        currentIndex = nextIndex;
+var swiper = new Swiper(".swiper", {
+    loop: true,
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 100,
+        modifier: 3,
+        slideShadows: true
+    },
+    keyboard: {
+        enabled: true
+    },
+    mousewheel: {
+        thresholdDelta: 70
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+    },
+    breakpoints: {
+        640: {
+        slidesPerView: 2
+    },
+        768: {
+        slidesPerView: 2
+    },
+        1024: {
+        slidesPerView: 3
+    },
+        1560: {
+        slidesPerView: 3
     }
-
-    setInterval(showNextItem, 3000); // Troca a cada 3 segundos
+    }
 });

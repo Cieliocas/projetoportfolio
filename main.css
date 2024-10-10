@@ -1,3 +1,4 @@
+
 /* Reset básico */
 * {
     margin: 0;
@@ -107,12 +108,13 @@ footer {
 .header-content {
     text-align: center;
     max-width: 800px;
+    margin-bottom: 10em;
 }
 
 .header-content p {
     color: #f39c12; /* Cor laranja */
     font-size: 1.2rem;
-    margin-bottom: 2.4rem;
+    margin-bottom: 1.2rem;
 }
 
 .header-content h1 {
@@ -123,18 +125,24 @@ footer {
 
 .header-content h2 {
     font-size: 2.5rem;
+    cursor: pointer;
+    margin: auto;
     font-weight: 300;
+    transition: font-weight 250ms ease-in-out;
     color: #8892b0;
+}
+
+.header-content h2:hover {
+    font-weight: 900;
 }
 
 .header-description {
     margin-top: 1.5rem;
-    font-size: 1rem;
+    font-size: 3rem;
     color: #8892b0;
 }
 
 .cta-button {
-    margin-top: 2rem;
     padding: 0.8rem 1.5rem;
     border: 2px solid #f39c12; /* Cor laranja */
     background: transparent;
@@ -152,8 +160,8 @@ footer {
 
 /* Estilos da foto de perfil */
 .profile-photo {
-    width: 150px;
-    height: 150px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 1rem;
@@ -184,8 +192,7 @@ footer {
 
 /* Seção Projetos */
 .projects-section {
-    padding: 4rem 2rem;
-    background-color: rgba(255, 255, 255, 0.1); /* Fundo transparente */
+    background-color: rgba(255, 255, 255, 0); /* Fundo transparente */
     border-radius: 10px;
     max-width: 1000px;
     margin: 2rem auto;
@@ -193,54 +200,214 @@ footer {
     text-align: center;
 }
 
-.projects-section h3 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    color: #f39c12; /* Cor laranja */
-}
-
-/* Estilo do carousel */
-.carousel {
-    display: flex;
-    overflow: hidden;
+main {
     position: relative;
-    width: 100%;
+    width: calc(min(90rem, 90%));
+    margin: 0 auto;
+    min-height: 100vh;
+    column-gap: 3rem;
+    padding-block: min(20vh, 3rem);
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
 }
 
-.carousel-item {
-    min-width: 25%;
-    box-sizing: border-box;
-    padding: 1rem;
-    transition: transform 0.5s ease;
+.bg {
+    position: fixed;
+    top: -4rem;
+    left: -12rem;
+    z-index: -1;
+    opacity: 0;
 }
 
-.carousel img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 1rem;
-    border: 2px solid #f39c12;
-    cursor: pointer;
-    transition: transform 0.5s ease;
-    transition: opacity 0.5s ease; 
+.bg2 {
+    position: fixed;
+    bottom: -2rem;
+    right: -3rem;
+    z-index: -1;
+    width: 9.375rem;
+    opacity: 0;
 }
 
-.carousel h4 {
-    margin-top: 1rem;
-    color: #f39c12;
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
+main {
+    position: relative;
+    width: calc(min(90rem, 90%));
+    margin: 0 auto;
+    min-height: 100vh;
+    column-gap: 3rem;
+    padding-block: min(20vh, 3rem);
 }
 
-.carousel p {
+main > div span {
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 1rem;
+    color: #717171;
+}
+
+main > div h1 {
+    text-transform: capitalize;
+    letter-spacing: 0.8px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-size: clamp(3.4375rem, 3.25rem + 0.75vw, 4rem);
+    background-color: #f39c12;
+    background-image: linear-gradient(45deg, #f39c12, #ff0055);
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+
+main > div hr {
+    display: block;
+    background: #f39c12;
+    height: 0.25rem;
+    width: 6.25rem;
+    border: none;
+    margin: 1.125rem 0 1.875rem 0;
+}
+
+main > div p {
+    line-height: 1.6;
+    margin-bottom: 1.2em;
+}
+
+main a {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 500;
+    background: linear-gradient(45deg, #ff0055, #f39c12);
+    border-radius: 3.125rem;
+    transition: 0.3s ease-in-out;
+}
+
+main > div > a {
+    border: 2px solid #c2c2c2;
+    margin-top: 2.188rem;
+    padding: 0.625rem 1.875rem;
+}
+
+main > div > a:hover {
+    border: 0.125rem solid #f39c12;
     color: #ffffff;
 }
 
-.carousel-item:hover {
-    transform: scale(1.05);
+.swiper {
+    width: 100%;
+    height: 500px;
+    padding-top: 3.125rem;
 }
+
+.swiper-pagination-bullet,
+.swiper-pagination-bullet-active {
+    background: #fff;
+}
+
+.swiper-pagination {
+    bottom: 1.25rem !important;
+}
+
+.swiper-slide {
+    width: 18.75rem;
+    height: 28.125rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: self-start;
+}
+
+
+
+.swiper-slide h2 {
+    color: #ffffff;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.4;
+    margin-bottom: 0.625rem;
+    padding: 0 0 0 1.563rem;
+    text-transform: uppercase;
+}
+
+.swiper-slide p {
+    color: #ffffff;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    padding: 0 1.563rem;
+    line-height: 1.6;
+    font-size: 0.75rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    text-shadow: #f39c12;
+}
+
+.swiper-slide a {
+    margin: 1.25rem 1.563rem 3.438rem 1.563rem;
+    padding: 0.438em 1.875rem;
+    font-size: 0.9rem;
+}
+
+.swiper-slide a:hover {
+    color: #ffffff;
+}
+
+.swiper-slide div {
+    display: none;
+    opacity: 0;
+    padding-bottom: 0.625rem;
+}
+
+.swiper-slide-active div {
+    display: block;
+    opacity: 1;
+}
+
+.swiper-slide--one {
+    background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+        url("https://www.codecademy.com/resources/blog/wp-content/uploads/2022/12/5-Eye-Catching-Projects-for-a-Front-End-Developer-Portfolio-1.png")
+            no-repeat 50% 50% / cover;
+}
+
+.swiper-slide--two {
+    background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+    url("https://geeks4learning.com/wp-content/uploads/2021/05/Web-Developer1-1-.jpg")
+            no-repeat 50% 50% / cover;
+}
+
+.swiper-slide--three {
+    background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+        url("https://miro.medium.com/v2/resize:fit:1192/1*tcyIYRA_lF-A1AqZz-lm5A.png")
+            no-repeat 50% 50% / cover;
+}
+
+
+.swiper-slide--four {
+    background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+        url("https://media.licdn.com/dms/image/D4E12AQG9rI1dRRfbxA/article-cover_image-shrink_720_1280/0/1681124045922?e=2147483647&v=beta&t=RQfWf5268mocMw6M3Kv16vktahE5M044wnjGvR5_TQg")
+            no-repeat 50% 50% / cover;
+}
+
+.swiper-slide--five {
+    background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+        url("https://cdn.sanity.io/images/tlr8oxjg/production/d2f16531bde974464ad7ab74dc335790dbdebffa-1192x668.png?w=3840&q=100&fit=clip&auto=format")
+            no-repeat 50% 50% / cover;
+}
+
+.swiper-3d .swiper-slide-shadow-left,
+.swiper-3d .swiper-slide-shadow-right {
+    background-image: none;
+}
+
 
 
 /* Responsividade */
@@ -265,13 +432,9 @@ footer {
         font-size: 2rem;
     }
 
-    .carousel-item {
-        min-width: 50%; /* Ajusta para mostrar 2 por vez em telas menores */
-    }
-}
-
 @media (max-width: 480px) {
-    .carousel-item {
-        min-width: 100%; /* Ajusta para mostrar 1 por vez em telas pequenas */
+    .swiper {
+        height: 270px;
     }
+
 }
